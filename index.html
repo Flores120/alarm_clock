@@ -7,7 +7,16 @@
     <script src="js/scripts.js" defer></script>
     <title>Alarm Clock</title>
   </head>
-  <body>
+  <body onload="startTime()">
+
+  <div id="showTimeSet">
+
+  </div>
+    <div class="timeSet">
+      <label for="">Enter time</label>
+      <input id="timeSet" type="time" name="" value="">
+      <button onclick="setTime()" type="button" name="button">Enter</button>
+    </div>
     <div class="clockBox">
       <div class="buttons">
         <button class="sleep">Sleep</button>
