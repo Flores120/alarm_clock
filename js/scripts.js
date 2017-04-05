@@ -17,8 +17,10 @@ var setTime = function() {
   var setTo = joinAr.toString();
   document.getElementById("showTimeSet").innerHTML = "Alarm set for " + setTo;
   $( document ).ready(function() {
-    $("#showTimeSet").delay(1000).fadeOut("slow");
+    $("#showTimeSet").delay(2000).fadeOut("slow");
     document.getElementById("showTimeSet").style.padding = "10px";
+    document.getElementById("showTimeSet").style.height =  "40px";
+
   });
 }
 

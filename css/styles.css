@@ -96,13 +96,15 @@ input {
   outline: none;
 }
 #showTimeSet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 3;
   position: fixed;
-  text-align: center;
   top: 0;
   width: 100%;
   color: white;
-  font-size: 50px;
+  font-size: 20px;
   animation: color2 5s infinite;
 }
 .timeSet button  {
