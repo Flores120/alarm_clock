@@ -47,4 +47,7 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};
     return i;
 }
+function snooze() {
+  var colorChange = getElementById("bottomS").style.height = "1px";
+}
 checkTime();
