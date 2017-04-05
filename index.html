@@ -12,15 +12,20 @@
   <div id="showTimeSet">
 
   </div>
-    <div class="timeSet">
-      <label for="">Enter time</label>
-      <input id="timeSet" type="time" name="" value="">
-      <button onclick="setTime()" type="button" name="button">Enter</button>
+  <div id="rightBox"></div>
+  <div id="topBox">
+    <div id="snoozeB">
+      <button onclick="snooze()" id="snooze" name="button">Snooze</button>
     </div>
+  </div>
+
     <div class="clockBox">
       <div class="buttons">
-        <button class="sleep">Sleep</button>
-        <button class="set">Set</button>
+        <div class="timeSet">
+          <label for="">Enter time</label>
+          <input id="timeSet" type="time" name="" value="">
+          <button onclick="setTime()" type="button" name="button">Enter</button>
+        </div>
       </div>
       <div class="clockInterface">
         <div id="time"></div>

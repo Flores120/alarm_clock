@@ -37,8 +37,9 @@ var startTime = function () {
   var timeTo= time.toString();
   document.getElementById("time").innerHTML = timeTo;
   var t = setTimeout(startTime, 500);
+  var audio = new Audio('dog.mp3');
   if (convert == setTiming) {
-    alert("IT WORKING AND GET TO WORK")
+    audio.play();
   }
 }
 
