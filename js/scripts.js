@@ -18,6 +18,7 @@ var setTime = function() {
   document.getElementById("showTimeSet").innerHTML = "Alarm set for " + setTo;
   $( document ).ready(function() {
     $("#showTimeSet").delay(1000).fadeOut("slow");
+    document.getElementById("showTimeSet").style.padding = "10px";
   });
 }
 
