@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.js" defer></script>
     <script src="js/scripts.js" defer></script>
     <title>Alarm Clock</title>
   </head>
   <body onload="startTime()">
 
-  <div id="showTimeSet">
+  <div id="showTimeSet"></div>
 
-  </div>
   <div id="rightBox"></div>
   <div id="topBox">
     <div id="snoozeB">
@@ -26,7 +26,7 @@
         <div class="timeSet">
           <label for="">Enter time</label>
           <input id="timeSet" type="time" name="" value="">
-          <button onclick="setTime()" type="button" name="button">Enter</button>
+          <button id="showTimingB"onclick="setTime()" type="button" name="button">Enter</button>
         </div>
       </div>
       <div class="clockInterface">

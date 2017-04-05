@@ -15,7 +15,10 @@ var setTime = function() {
   var joinAr = slice1 + ":" + slice2;
 
   var setTo = joinAr.toString();
-  document.getElementById("showTimeSet").innerHTML = setTo;
+  document.getElementById("showTimeSet").innerHTML = "Alarm set for " + setTo;
+  $( document ).ready(function() {
+    $("#showTimeSet").delay(1000).fadeOut("slow");
+  });
 }
 
 var startTime = function () {
@@ -35,7 +38,7 @@ var startTime = function () {
   h = h % 12 || 12;
   var time = h + ":" + m;
   var timeTo= time.toString();
-  document.getElementById("time").innerHTML = timeTo;
+  document.getElementById("time").innerHTML =  timeTo;
   var t = setTimeout(startTime, 500);
   var audio = new Audio('dog.mp3');
   if (convert == setTiming) {
@@ -47,7 +50,7 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};
     return i;
 }
-function snooze() {
-  var colorChange = getElementById("bottomS").style.height = "1px";
-}
+// function snooze() {
+//   var colorChange = getElementById("bottomS").style.height = "1px";
+// }
 checkTime();

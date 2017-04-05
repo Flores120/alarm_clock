@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .clockBox {
   margin: auto;
   padding: 10px;
@@ -79,16 +83,27 @@ input {
   top: 10px;
 }
 #snoozeB button  {
+  padding: 10px;
   background: white;
   padding: 0px;
   font-family: 'Anton', sans-serif;
   width: 100px;
   height: 30px;
   border: none;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   transition: all .3s;
   outline: none;
+}
+#showTimeSet {
+  z-index: 3;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  font-size: 50px;
 }
 .timeSet button  {
   background: white;
