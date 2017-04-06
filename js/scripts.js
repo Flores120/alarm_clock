@@ -33,6 +33,7 @@ var setTime = function() {
 
 var startTime = function () {
   currentTime = new Date();
+  // document.getElementById("date").innerHTML =  currentTime;
   h = currentTime.getHours();
   m = currentTime.getMinutes().toString();
   s = currentTime.getSeconds().toString();
