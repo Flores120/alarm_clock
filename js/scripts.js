@@ -43,13 +43,13 @@ var startTime = function () {
     m = m + " AM"
   }
   h = h % 12 || 12;
- time = h + ":" + m;
+ time = h + " : " + m;
   var timeTo= time.toString();
   document.getElementById("time").innerHTML =  timeTo;
-  var t = setTimeout(startTime, 500);
-  var audio = new Audio('dog.mp3');
-  // console.log(setTiming);
+  var t = setTimeout(startTime, 1000);
+  var audio = new Audio('humble.mp3');
   if (convert == setTiming) {
+    t = setTimeout(1);
     audio.play();
   }
 }
