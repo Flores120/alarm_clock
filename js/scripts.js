@@ -31,7 +31,6 @@ var setTime = function() {
   });
 }
 
-var currentTime = 0;
 var startTime = function () {
   currentTime = new Date();
   h = currentTime.getHours();
@@ -69,9 +68,9 @@ function alarm() {
 
 }
 function snooze() {
-  if(audio.paused) {audio.currentTime=0;audio.play()}
-      else { audio.pause();
-  }
+    audio.currentTime = 100;
+    console.log(currentTime);
+
   document.getElementById("bottomS").style.height = "0px";
   document.getElementById("rightS").style.width = "0px";
   document.getElementById("bottomS").style.height = "0px";
@@ -79,6 +78,9 @@ function snooze() {
   // document.getElementById("snoozeB").style.top = "20px";
   document.getElementById("snoozeB").style.transform = "translateY(5px)"
   var add = setTiming + 100;
+  if (currentTime == setTiming) {
+    audio.play();
+  }
   console.log(add);
 }
 checkTime();
