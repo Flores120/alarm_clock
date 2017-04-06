@@ -44,6 +44,7 @@ body {
   height: 30px;
   background: gray;
   transform: skew(0deg , 30deg);
+  transition: all .3s;
 }
 #bottomS {
   left: 103px;
@@ -52,7 +53,7 @@ body {
   background: lightgray;
   height: 10px;
   transform: skew(60deg , 0deg);
-  transition: all .1s;
+  transition: all .3s;
 }
 
 #rightBox {
@@ -82,6 +83,7 @@ input {
   position: relative;
   left: 94px;
   top: 10px;
+  transition: all .5s;
 }
 #snoozeB button  {
   padding: 10px;
@@ -93,9 +95,14 @@ input {
   border: none;
   font-size: 18px;
   font-weight: bold;
-  transition: all .3s;
   outline: none;
+  /*box-shadow: 8px 8px 0px 8px #0a68ff;*/
 }
+
+/*#snoozeB button:active {
+  transform: translateX(4px);
+  box-shadow: 3px 3px 0px 3px #0a68ff;
+}*/
 
 #showTimeSet {
   display: flex;
@@ -119,13 +126,13 @@ input {
   border: none;
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 2px 2px 0px 2px lightgrey;
+  box-shadow: 3px 3px 0px 3px lightgrey;
   transition: all .3s;
   outline: none;
 }
 .timeSet button:active {
   transform: translateX(4px);
-  box-shadow: none;
+  box-shadow: 1px 1px 0px 1px darkgray;
 }
 label {
   color: white;
