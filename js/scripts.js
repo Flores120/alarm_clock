@@ -4,7 +4,8 @@ var setTime = function() {
   var userInput = document.getElementById("timeSet").value;
   var slice1 = userInput.substring(0,2);
   var slice2 = userInput.substring(3,5);
-  var secondJoin = slice1 + slice2;
+  var slice3 = "00";
+  var secondJoin = slice1 + slice2 + slice3;
   setTiming = parseInt(secondJoin);
   if (slice1 >=  12) {
     slice2 = slice2 + " PM";
@@ -20,30 +21,34 @@ var setTime = function() {
     $("#showTimeSet").delay(2000).fadeOut("slow");
     document.getElementById("showTimeSet").style.padding = "10px";
     document.getElementById("showTimeSet").style.height =  "40px";
-
   });
 }
 
 var startTime = function () {
   time = new Date();
   h = time.getHours();
-  m = time.getMinutes().toString()
-  var newT = h + m;
-  var convert = parseInt(newT);
+  m = time.getMinutes().toString();
+  s = time.getSeconds().toString();
   if (m < 10 ) {
     m = "0" + m;
   }
+  if (s < 10 ) {
+    s = "0" + s;
+  }
+  var newT = h + m + s;
+  var convert = parseInt(newT);
   if (h > 12) {
     m = m + " PM";
   } else {
     m = m + " AM"
   }
   h = h % 12 || 12;
-  var time = h + ":" + m;
+ time = h + ":" + m;
   var timeTo= time.toString();
   document.getElementById("time").innerHTML =  timeTo;
   var t = setTimeout(startTime, 500);
   var audio = new Audio('dog.mp3');
+  // console.log(setTiming);
   if (convert == setTiming) {
     audio.play();
   }
