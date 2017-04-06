@@ -58,7 +58,11 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};
     return i;
 }
-// function snooze() {
-//   var colorChange = getElementById("bottomS").style.height = "1px";
-// }
+function snooze() {
+  document.getElementById("bottomS").style.display = "none";
+  document.getElementById("rightS").style.display = "none";
+  document.getElementById("snoozeB").style.top = "20px";
+  document.getElementById("snoozeB").style.left = "104px";
+
+}
 checkTime();
