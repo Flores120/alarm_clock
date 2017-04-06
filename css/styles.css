@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Anton', sans-serif;
 }
 .clockBox {
   /*margin: auto; */
@@ -22,6 +23,19 @@ body {
   height: 100px;
   background: white;
   margin-bottom: 20px;
+}
+#am {
+  font-size: 30px;
+  font-weight: bold;
+  color: #39ff14;
+}
+#seconds {
+  font-size: 24px;
+  font-weight: bold;
+  color: #39ff14;
+  margin-bottom: 8px;
+  margin-left: 3px;
+  margin-right: 3px;
 }
 .buttons {
   display: flex;

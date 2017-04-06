@@ -46,15 +46,18 @@ var startTime = function () {
   var newT = h + m + s;
   currentTime = parseInt(newT);
   // console.log(currentTime);
-  if (h > 12) {
-    m = m + " PM";
+   if (h > 12) {
+    var pm  = "PM";
   } else {
-    m = m + " AM"
+    var am  = "AM";
   }
+  var amPM = pm || am;
   h = h % 12 || 12;
-  time = h + " : " + m;
+  time = h + ":" + m;
   var timeTo= time.toString();
   document.getElementById("time").innerHTML =  timeTo;
+  document.getElementById("seconds").innerHTML =  s;
+  document.getElementById("am").innerHTML =  amPM;
   var t = setTimeout(startTime, 1000);
   if (currentTime == setTiming) {
     audio.play();
@@ -65,23 +68,16 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};
     return i;
 }
-function alarm() {
 
-}
 function snooze() {
-    audio.currentTime = 100;
-    console.log(currentTime);
-
+  audio.currentTime = 100;
   document.getElementById("bottomS").style.height = "0px";
   document.getElementById("rightS").style.width = "0px";
   document.getElementById("bottomS").style.height = "0px";
   document.getElementById("rightS").style.width = "0px";
-  // document.getElementById("snoozeB").style.top = "20px";
   document.getElementById("snoozeB").style.transform = "translateY(5px)"
-  var add = setTiming + 100;
   if (currentTime == setTiming) {
     audio.play();
   }
-  console.log(add);
 }
 checkTime();
