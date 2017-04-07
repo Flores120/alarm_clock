@@ -7,27 +7,26 @@ var setTime = function() {
   var slice2 = userInput.substring(3,5);
   var slice3 = "00";
   var secondJoin = slice1 + slice2 + slice3;
-  setTiming = parseInt(secondJoin);
-  console.log(setTiming);
-  if (slice1 >=  12) {
+    setTiming = parseInt(secondJoin);
+    console.log(setTiming);
+    if (slice1 >=  12) {
     slice2 = slice2 + " PM";
-  } else {
-    slice2 = slice2 + " AM";
-  }
-  slice1 = slice1 % 12 || 12;
-  var joinAr = slice1 + ":" + slice2;
+    } else {
+      slice2 = slice2 + " AM";
+    }
+    slice1 = slice1 % 12 || 12;
+    var joinAr = slice1 + ":" + slice2;
 
   var setTo = joinAr.toString();
-  if (userInput == "" ) {
-    document.getElementById("showTimeSet").innerHTML = "Please set a time";
-  }
-   else {
+    if (userInput == "" ) {
+      document.getElementById("showTimeSet").innerHTML = "Please set a time";
+    } else {
      document.getElementById("showTimeSet").innerHTML = "Alarm set for " + setTo;
-   }
+    }
   $( document ).ready(function() {
     $("#showTimeSet").delay(2000).fadeOut("slow");
-    document.getElementById("showTimeSet").style.padding = "10px";
-    document.getElementById("showTimeSet").style.height =  "40px";
+      document.getElementById("showTimeSet").style.padding = "10px";
+      document.getElementById("showTimeSet").style.height =  "40px";
   });
 }
 
@@ -71,10 +70,13 @@ function checkTime(i) {
 
 function snooze() {
   audio.currentTime = 100;
-  document.getElementById("bottomS").style.height = "0px";
-  document.getElementById("rightS").style.width = "0px";
-  document.getElementById("bottomS").style.height = "0px";
-  document.getElementById("rightS").style.width = "0px";
+  document.getElementById("bottomS").style.height = "5px";
+  document.getElementById("bottomS").style.left = "99px";
+  document.getElementById("bottomS").style.top = "-15px";
+  document.getElementById("rightS").style.width = "5px";
+  document.getElementById("bottomS").style.height = "5px";
+  document.getElementById("rightS").style.top = "-13px";
+  document.getElementById("rightS").style.width = "5px";
   document.getElementById("snoozeB").style.transform = "translateY(5px)"
   if (currentTime == setTiming) {
     audio.play();

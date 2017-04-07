@@ -97,7 +97,7 @@ input {
   position: relative;
   left: 94px;
   top: 10px;
-  transition: all .5s;
+  transition: all .3s;
 }
 #snoozeB button  {
   padding: 10px;
