@@ -20,28 +20,32 @@ body {
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 100px;
-  background: white;
+  /*height: 100px;*/
+  /*background: white;*/
   margin-bottom: 20px;
 }
 #am {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
-  color: #39ff14;
+  color: #0545ad;
+  font-family: 'Press Start 2P', cursive;
+  animation: color 5s infinite;
 }
 #seconds {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
-  color: #39ff14;
+  color: #0545ad;
   margin-bottom: 8px;
   margin-left: 3px;
   margin-right: 3px;
+  font-family: 'Press Start 2P', cursive;
+  animation: color 5s infinite;
 }
 .buttons {
   display: flex;
-  justify-content: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   margin-top: 10px;
+  margin-right: 20px;
 }
 #rightBox,
 #topBox{
@@ -90,8 +94,10 @@ input {
   outline: none;
   height: 38px;
   font-size: 16px;
-  border: none;
-  animation: color 5s infinite;
+  /*box-shadow: 3px 3px 0px 3px #044fc9;*/
+  border: 5px solid white;
+  border-radius: 5px;
+  /*border: none;*/
 }
 #snoozeB {
   position: relative;
@@ -155,16 +161,38 @@ label {
 }
 
 #time {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-  font-family: 'Anton', sans-serif;
-  color: #39ff14;
+  font-family: 'Press Start 2P', cursive;
+  color: #0545ad;
+  animation: color 5s infinite;
 }
-@keyframes color {
-  0% {border: solid #39ff14 3px;}
-  50% {border: solid white 3px;}
-  100% {border: solid #39ff14 3px;}
+#date {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0545ad;
+  text-align: center;
+  margin-top: 10px;
 }
+#divider {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(270deg, #044fc9, #00163a);
+  background-size: 400% 400%;
+  animation: dividerColor 10s ease infinite;
+}
+@keyframes dividerColor {
+    0%{background-position:0% 47%}
+    50%{background-position:100% 54%}
+    100%{background-position:0% 47%}
+}
+/*@keyframes color {
+  0% {color: #0545ad;}
+  50% {color: #044fc9;}
+  75% {color: #025df2;}
+  80% {color: #0060ff;}
+  100% {color: #0545ad;}
+}*/
 @keyframes color2 {
   0% {background-color: rgba(255, 97, 97, .5)}
   50% {background-color: rgba(255, 97, 97, .8)}

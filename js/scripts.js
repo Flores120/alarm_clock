@@ -31,7 +31,7 @@ var setTime = function() {
 }
 
 var startTime = function () {
-  currentTime = new Date();
+  var currentTime = new Date();
   // document.getElementById("date").innerHTML =  currentTime;
   h = currentTime.getHours();
   m = currentTime.getMinutes().toString();
@@ -62,6 +62,15 @@ var startTime = function () {
     audio.play();
   }
 }
+var monthNames = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
+];
+  var date = new Date();
+  // var month = date.getUTCMonth() + 1; //months from 1-12
+  var day = date.getUTCDate();
+  var year = date.getUTCFullYear();
+  var newdate = monthNames[date.getMonth()] + " " + day + " " +  year;
+  document.getElementById("date").innerHTML = newdate;
 
 function checkTime(i) {
     if (i < 10) {i = "0" + i};
