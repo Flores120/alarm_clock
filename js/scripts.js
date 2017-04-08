@@ -30,8 +30,10 @@ var setTime = function() {
   });
 }
 
+var currentTime = new Date();
+
 var startTime = function () {
-  var currentTime = new Date();
+  currentTime = new Date();
   // document.getElementById("date").innerHTML =  currentTime;
   h = currentTime.getHours();
   m = currentTime.getMinutes().toString();
@@ -82,10 +84,8 @@ function snooze() {
   document.getElementById("bottomS").style.height = "5px";
   document.getElementById("bottomS").style.left = "99px";
   document.getElementById("bottomS").style.top = "-15px";
-  document.getElementById("rightS").style.width = "5px";
-  document.getElementById("bottomS").style.height = "5px";
   document.getElementById("rightS").style.top = "-13px";
-  document.getElementById("rightS").style.width = "5px";
+  document.getElementById("rightS").style.width = "8px";
   document.getElementById("snoozeB").style.transform = "translateY(5px)"
   if (currentTime == setTiming) {
     audio.play();

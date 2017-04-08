@@ -4,13 +4,11 @@ body {
   font-family: 'Anton', sans-serif;
 }
 .clockBox {
-  /*margin: auto; */
   position: relative;
   left: 351px;
-  padding: 10px;
   margin-top: 100px;
-  width: 500px;
-  height: 250px;
+  width: 520px;
+  height: 270px;
   background: #0a68ff;
 }
 .clockInterface {
@@ -56,11 +54,11 @@ body {
   position: relative;
 }
 #rightS {
-  left: 195px;
+  left: 194px;
   top: -15px;
-  width: 16px;
+  width: 17px;
   height: 30px;
-  background: gray;
+  background: #001b47;
   transform: skew(0deg , 30deg);
   transition: all .3s;
 }
@@ -68,7 +66,7 @@ body {
   left: 103px;
   top: -20px;
   width: 100px;
-  background: lightgray;
+  background: #033fa0;
   height: 10px;
   transform: skew(60deg , 0deg);
   transition: all .3s;
@@ -92,12 +90,15 @@ body {
 }
 input {
   outline: none;
-  height: 38px;
+  height: 30px;
   font-size: 16px;
-  /*box-shadow: 3px 3px 0px 3px #044fc9;*/
-  border: 5px solid white;
+  font-weight: bold;
+  color: #02327f;
+  border: none;
   border-radius: 5px;
-  /*border: none;*/
+  margin-top: 10px;
+  background: #074fc1;
+  padding: 5px;
 }
 #snoozeB {
   position: relative;
@@ -107,7 +108,8 @@ input {
 }
 #snoozeB button  {
   padding: 10px;
-  background: white;
+  background: #02327f;
+  color: white;
   padding: 0px;
   font-family: 'Anton', sans-serif;
   width: 100px;
@@ -116,14 +118,7 @@ input {
   font-size: 18px;
   font-weight: bold;
   outline: none;
-  /*box-shadow: 8px 8px 0px 8px #0a68ff;*/
 }
-
-/*#snoozeB button:active {
-  transform: translateX(4px);
-  box-shadow: 3px 3px 0px 3px #0a68ff;
-}*/
-
 #showTimeSet {
   display: flex;
   align-items: center;
@@ -137,7 +132,8 @@ input {
   animation: color2 5s infinite;
 }
 .timeSet button  {
-  background: white;
+  background: #02327f;
+  color: white;
   padding: 10px;
   font-family: 'Anton', sans-serif;
   width: 60px;
@@ -146,7 +142,7 @@ input {
   border: none;
   font-size: 16px;
   font-weight: bold;
-  box-shadow: 3px 3px 0px 3px lightgrey;
+  box-shadow: 3px 3px 0px 3px #001b47;
   transition: all .3s;
   outline: none;
 }
@@ -154,12 +150,6 @@ input {
   transform: translateX(4px);
   box-shadow: 1px 1px 0px 1px darkgray;
 }
-label {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
 #time {
   font-size: 20px;
   font-weight: bold;
@@ -168,18 +158,24 @@ label {
   animation: color 5s infinite;
 }
 #date {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   color: #0545ad;
   text-align: center;
   margin-top: 10px;
+  font-family: 'Press Start 2P', cursive;
 }
-#divider {
+#divider,
+#divider2 {
   width: 100%;
   height: 10px;
   background: linear-gradient(270deg, #044fc9, #00163a);
   background-size: 400% 400%;
   animation: dividerColor 10s ease infinite;
+  margin-bottom: 20px;
+}
+#divider2 {
+  margin-top: 144px;
 }
 @keyframes dividerColor {
     0%{background-position:0% 47%}
